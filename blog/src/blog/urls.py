@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views, view_post, view_cbv, view_orm
+from . import views, view_post, view_cbv, view_orm, view_form
 
 urlpatterns = [
     path("blogs/", views.index, name="index"),
@@ -20,4 +20,7 @@ urlpatterns = [
     path("orm-create-data/", view_orm.create_data, name="orm-create-data"),
     path("orm-update-data/", view_orm.update_data, name="orm-update-data"),
     path("orm-remove-data/", view_orm.remove_data, name="orm-remove-data"),
+    
+    
+    path("form-index/", view_form.index, name="form-index"),
 ]

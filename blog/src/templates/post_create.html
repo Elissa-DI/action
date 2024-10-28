@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Post Form</title>
+</head>
+<body>
+	<form method="post">
+        {{ form.as_p }}
+        <input 
+          type="hidden"
+          name="csrfmiddlewaretoken"
+          value="{{ csrf_token }}"
+        />
+        <button type="submit">Create Blog</button>
+    </form>
+</body>
+</html>
