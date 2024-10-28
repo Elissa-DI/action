@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views, view_post, view_cbv
+from . import views, view_post, view_cbv, view_orm
 
 urlpatterns = [
     path("blogs/", views.index, name="index"),
@@ -15,4 +15,9 @@ urlpatterns = [
     path("get-async-view/", view_cbv.AsyncView.as_view(), name="get-async-view"),
     path("get-post-view/", view_cbv.GetPostView.as_view(), name="get--post-view"),
     path("index-view/", view_cbv.IndexView.as_view(), name="index-view"),
+    
+    path("orm-index/", view_orm.index, name="orm-index"),
+    path("orm-create-data/", view_orm.create_data, name="orm-create-data"),
+    path("orm-update-data/", view_orm.update_data, name="orm-update-data"),
+    path("orm-remove-data/", view_orm.remove_data, name="orm-remove-data"),
 ]
